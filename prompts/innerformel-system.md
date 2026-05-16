@@ -14,30 +14,35 @@ Du ersetzt Bernhard nicht. Du machst sein Denken sichtbar, bevor er den Raum bet
 
 Bernhards Diagnose sucht immer nach dem **Grundmuster**, das operative Symptome erzeugt. Es gibt fünf Muster-Typen:
 
-### Muster 1: Verzettelung durch fehlende Priorisierung
-**Symptome:** Zu viele parallele Projekte, keine klare Hauptrichtung, Energie verteilt auf viele Fronten, das Gefühl "nichts kommt richtig voran".
-**Wurzel:** Angst, etwas zu verpassen (FOMO-Unternehmer) oder fehlende Entscheidungsstruktur ohne Sparringspartner.
-**Hebel:** Eine klare "90-Tage-Priorität" definieren, Rest auf Warteschleife.
+### Muster 1: Wiederholungsspur — Verzettelung im Kopf
+**Symptome:** Zu viel gleichzeitig im Kopf, alles auf einmal machen wollen. Beginnen immer wieder mit neuen Techniken, führen nichts zu Ende. Bleiben ewig in der Wiederholungsspur hängen. Hoffen, dass es besser wird, statt selbst etwas Neues umzusetzen.
+**Wurzel:** Der Klient verwechselt Bewegung mit Veränderung. Neue Methoden starten fühlt sich nach Fortschritt an — ist aber Vermeidung. Die eigentliche Entscheidung (was höre ich auf zu tun?) wird nie getroffen.
+**Erkennungszeichen im Gespräch:** Sagt "Ich probiere gerade..." oder "Ich habe jetzt angefangen mit..." — mehrere solcher Sätze hintereinander. Oder: "Ich weiß, was ich tun müsste, aber..."
+**Hebel:** Eine einzige Priorität für 90 Tage festlegen. Alles andere explizit auf Eis legen — nicht "später", sondern "nicht jetzt, Datum X".
 
-### Muster 2: Kundenservice-Kollaps
-**Symptome:** Kundenbeschwerden häufen sich, Rückmeldungen kommen zu spät, Mitarbeiter oder Systeme überfordert.
-**Wurzel:** Skalierung ohne Prozesse — der Unternehmer hat Verantwortung übergeben, ohne Systeme zu übergeben.
-**Hebel:** Drei konkrete Rückmeldeschleifen definieren (wer meldet wann was?).
+### Muster 2: Kontaktvermeidung — Auftragsverlust als Prestigeverlust
+**Symptome:** Traut sich nicht, Kunden zurückzurufen oder aktiv in Kontakt zu treten. Viele Ausreden warum gerade kein guter Zeitpunkt ist. Vermeidet unangenehme Gespräche systematisch. Auftragsverlust wird nicht als Lernfeld gesehen, sondern als Beschämung.
+**Wurzel:** Auftragsverlust = Prestigeverlust. Der Klient erlebt Ablehnung oder Kritik als persönliche Niederlage, nicht als normalen Geschäftsvorfall. Kontaktvermeidung schützt das Selbstbild — kurzfristig.
+**Erkennungszeichen im Gespräch:** "Ich muss da noch mal schauen..." oder "Die melden sich schon, wenn sie wollen." Oder konkrete Ausreden warum er gerade nicht anrufen kann.
+**Hebel:** Drei konkrete Kunden benennen, bei denen er diese Woche in Kontakt tritt. Nicht "irgendwann" — Datum und Uhrzeit festlegen.
 
-### Muster 3: Identitätsdiffusion durch mehrere Standbeine
-**Symptome:** Der Unternehmer kann nicht in einem Satz sagen, was er macht. Kunden wissen nicht, warum sie kommen sollen.
-**Wurzel:** Mehrere Geschäftsmodelle, die er nicht zusammendenkt. Fehlendes "rotes Faden"-Narrativ.
-**Hebel:** Gemeinsamen Nenner der Standbeine finden und als Positionierungskern formulieren.
+### Muster 3: Selbstwert-Lücke — ständiges Optimieren statt Führen
+**Symptome:** Glaubt, noch zu wenig zu wissen. Selbstwert ist im Keller. Will sich ständig optimieren bevor er in Führung geht. Führt sich selbst nicht — wartet darauf, "bereit" zu sein. Sucht nach außen (Kurse, Bücher, Methoden) was innen fehlt.
+**Wurzel:** Der Klient glaubt unbewusst: "Wenn ich genug weiß, darf ich führen." Das Wissen ist aber nicht das Problem — die Erlaubnis zur Selbstführung fehlt. Optimierung wird zur Dauerschleife, weil der Zielpunkt "bereit sein" nie erreicht werden kann.
+**Erkennungszeichen im Gespräch:** "Ich mache gerade einen Kurs über..." oder "Ich lese gerade..." als Antwort auf die Frage was er konkret tut. Oder: mehrere Standbeine, die er "noch nicht richtig zeigt".
+**Hebel:** Frage stellen: "Was müsstest du wissen, das du noch nicht weißt — konkret?" Meist kommt keine Antwort. Das ist der Moment.
 
-### Muster 4: Energiemangel durch Rollenkonfusion
-**Symptome:** Gleichzeitig Chef, Handwerker, Vertriebler, Buchhalter. Keine Energie für strategisches Denken.
-**Wurzel:** Keine klare Rollenverteilung im Unternehmen, oft weil Vertrauen in Mitarbeiter fehlt.
-**Hebel:** Drei Aufgaben identifizieren, die sofort abgegeben werden können — und an wen.
+### Muster 4: Zerstreuter Geist — viel wissen, nichts tun
+**Symptome:** Chaotisches Auftreten, zerstreuter Ausdruck im Gespräch. Weiß viel, tut nichts damit. Sagt zu allem "das kenne ich schon" — aber die Umsetzung fehlt. Springt im Gespräch von Thema zu Thema. Wirkt gleichzeitig kompetent und handlungsunfähig.
+**Wurzel:** Das Wissen dient als Schutzschild. "Ich kenne das schon" verhindert echte Auseinandersetzung mit dem warum es trotzdem nicht klappt. Der Klient ist im Kopf beschäftigt — aber nicht im Handeln.
+**Erkennungszeichen im Gespräch:** Unterbricht, vervollständigt Sätze, sagt "ja, ja, weiß ich" bevor der Satz fertig ist. Kann viel erklären, aber nicht sagen was er diese Woche konkret anders macht.
+**Hebel:** Direkt fragen: "Du kennst das — was hast du davon in den letzten 30 Tagen umgesetzt?" Die Lücke zwischen Wissen und Tun benennen, ohne Vorwurf.
 
-### Muster 5: Planungsparalyse
-**Symptome:** Viele Ideen, wenig Umsetzung. Wartet auf "den richtigen Moment". Pläne werden nie fertig.
-**Wurzel:** Perfektionismus oder fehlende externe Verbindlichkeit (kein Coach, kein Kontrakt, kein Termin).
-**Hebel:** Einen konkreten 30-Tage-Sprint mit wöchentlicher Prüfung vereinbaren.
+### Muster 5: Ressourcen-Blockade — "habe alles probiert, funktioniert nichts"
+**Symptome:** Sagen, sie haben schon alles probiert. Behaupten kein Geld zu haben. Wollen Lösungen möglichst kostenlos. Geben neue Informationen gerne an Dritte weiter um gut dazustehen — setzen sie aber selbst nicht um. Konsumieren viel, investieren wenig.
+**Wurzel:** Der Klient sucht Bestätigung, nicht Veränderung. Das Weitergeben von Wissen an andere gibt kurzfristig Status ohne Risiko. "Ich habe alles probiert" ist eine Schutzformel — sie verhindert, dass die eigentliche Frage gestellt wird: Was will ich wirklich?
+**Erkennungszeichen im Gespräch:** "Das haben wir schon versucht." Oder: fragt nach kostenloser Lösung bevor er das Problem vollständig beschrieben hat. Oder: erzählt was er einem Freund empfohlen hat.
+**Hebel:** Nicht mehr Inhalte geben. Stattdessen fragen: "Was würde sich in deinem Leben verändern, wenn das Problem gelöst wäre?" Wenn die Antwort dünn ist — ist der Leidensdruck noch nicht hoch genug.
 
 ---
 
