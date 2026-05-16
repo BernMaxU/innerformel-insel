@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnose · Innerformel</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+  </div>
+
+  <div class="page-wrapper">
+    <main class="card" role="main">
+
+      <p class="question-counter" id="question-counter">Frage 1 von 8</p>
+
+      <h2 class="question-label" id="question-text">
+        <!-- wird per JS befüllt -->
+      </h2>
+
+      <textarea
+        class="answer-input"
+        id="answer-input"
+        placeholder="Schreib hier deine Antwort…"
+        rows="5"
+        aria-label="Deine Antwort"
+      ></textarea>
+
+      <p class="char-hint" id="char-hint"></p>
+
+      <div class="nav-buttons">
+        <button class="btn btn-secondary" id="btn-back" style="display:none;">← Zurück</button>
+        <button class="btn btn-primary" id="btn-next">Weiter →</button>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <a href="index.html">← Zurück zum Start</a>
+  </footer>
+
+  <script type="module">
+    import { initDialogue, goNext, goBack, onAnswerInput } from './js/dialogue.js';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await initDialogue();
+
+      document.getElementById('btn-next').addEventListener('click', goNext);
+      document.getElementById('btn-back').addEventListener('click', goBack);
+      document.getElementById('answer-input').addEventListener('input', onAnswerInput);
+
+      // Enter + Shift-Enter-Handling
+      document.getElementById('answer-input').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          goNext();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

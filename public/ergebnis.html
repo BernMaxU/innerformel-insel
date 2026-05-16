@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deine Diagnose · Innerformel</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="progress-bar-track">
+    <div class="progress-bar-fill" style="width: 100%"></div>
+  </div>
+
+  <!-- Loading-State -->
+  <div class="page-wrapper" id="state-loading">
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p class="loading-text">Bernhards Diagnose-Logik arbeitet…<br><span style="font-size:0.9rem; color: var(--color-muted);">Das dauert 5–15 Sekunden.</span></p>
+    </div>
+  </div>
+
+  <!-- Ergebnis-State -->
+  <div class="page-wrapper" id="state-result" style="display:none;">
+    <main class="card" role="main">
+
+      <p class="question-counter">Deine erste Hypothese</p>
+
+      <h1 class="heading-serif" style="font-size: 1.4rem; margin-bottom: 1rem;">
+        Hier ist, wo es vermutlich hängt.
+      </h1>
+
+      <div class="hypothese-box">
+        <p class="hypothese-text" id="hypothese-text"><!-- wird per JS befüllt --></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 class="heading-serif" style="font-size: 1.15rem; margin-bottom: 0.75rem;">
+        3 Fragen, die Bernhard im Gespräch schärft:
+      </h2>
+
+      <ol class="vertiefungsfragen" id="vertiefungsfragen">
+        <!-- wird per JS befüllt -->
+      </ol>
+
+      <div class="disclaimer">
+        Das ist eine erste Hypothese, kein Urteil. Bernhard schärft das im Gespräch — auf Basis seiner Erfahrung aus hunderten Mandaten.
+      </div>
+
+      <button class="btn btn-primary btn-full" id="btn-termin" style="margin-bottom: 0.75rem;">
+        Termin mit Bernhard buchen →
+      </button>
+
+      <p id="transcript-status" style="text-align:center; font-size: 0.85rem; color: var(--color-muted); min-height: 1.2em;"></p>
+
+    </main>
+
+    <!-- Debug-Panel (nur bei ?mode=check) -->
+    <div id="debug-section" style="display:none; width:100%; max-width:60ch; margin-top: 2rem;">
+      <p class="debug-label">Debug-Modus aktiv (nur für Bernhard)</p>
+      <div class="debug-panel">
+        <p class="debug-label">System-Prompt:</p>
+        <pre id="debug-prompt"></pre>
+        <br>
+        <p class="debug-label">Raw KI-Response:</p>
+        <pre id="debug-raw"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error-State -->
+  <div class="page-wrapper" id="state-error" style="display:none;">
+    <div class="card">
+      <div class="error-box">
+        <p>Die Diagnose konnte gerade nicht erstellt werden.</p>
+        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--color-muted);">Bernhard meldet sich direkt bei dir.</p>
+        <a href="mailto:bernhard@bernharduka.com?subject=Diagnose-Anfrage&body=Hallo%20Bernhard%2C%20ich%20habe%20das%20Diagnose-Tool%20genutzt%20und%20bin%20gespannt%20auf%20deine%20Einsch%C3%A4tzung."
+           class="btn btn-primary">
+          E-Mail an Bernhard
+        </a>
+      </div>
+      <p style="text-align:center; margin-top: 1.5rem;">
+        <a href="diagnose.html" style="color: var(--color-muted); font-size: 0.9rem;">← Nochmal versuchen</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://bernharduka.com" target="_blank" rel="noopener">bernharduka.com</a>
+  </footer>
+
+  <script type="module">
+    import { getAllAnswers, clearSession } from './js/dialogue.js';
+    import { callDiagnose, callSendTranscript } from './js/api.js';
+
+    const params = new URLSearchParams(window.location.search);
+    const isDebug = params.get('mode') === 'check';
+    const bookingUrl = 'https://bernharduka.com/termin';
+
+    function showState(id) {
+      ['state-loading', 'state-result', 'state-error'].forEach(s => {
+        document.getElementById(s).style.display = s === id ? '' : 'none';
+      });
+    }
+
+    function renderResult(data) {
+      // Hypothese
+      document.getElementById('hypothese-text').textContent = data.hypothese_klient;
+
+      // Vertiefungsfragen
+      const list = document.getElementById('vertiefungsfragen');
+      list.innerHTML = '';
+      (data.vertiefungsfragen || []).forEach((frage, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="frage-nummer">${i + 1}.</span><span>${frage}</span>`;
+        list.appendChild(li);
+      });
+
+      // Debug-Modus
+      if (isDebug) {
+        document.getElementById('debug-section').style.display = '';
+        document.getElementById('debug-prompt').textContent = data._debug_prompt || '(nicht übermittelt)';
+        document.getElementById('debug-raw').textContent = JSON.stringify(data, null, 2);
+      }
+
+      showState('state-result');
+    }
+
+    async function run() {
+      // Fragenantworten aus localStorage lesen
+      // dialogue.js braucht initDialogue() — wir lesen direkt aus localStorage
+      const raw = localStorage.getItem('innerformel_session');
+      let antworten = [];
+
+      if (raw) {
+        try {
+          const session = JSON.parse(raw);
+          // Katalog nachladen um Fragetexte zu ergänzen
+          const res = await fetch('../prompts/frage-katalog.json');
+          const katalog = await res.json();
+          const profil = params.get('profil') === 'mehrere-standbeine' ? 'mehrere-standbeine' : 'standard';
+          const fragen = katalog[profil] || katalog['standard'];
+
+          antworten = fragen.map(f => ({
+            id: f.id,
+            frage: f.frage,
+            antwort: session.antworten?.[f.id] || ''
+          })).filter(a => a.antwort.length > 0);
+        } catch {
+          showState('state-error');
+          return;
+        }
+      }
+
+      if (antworten.length === 0) {
+        showState('state-error');
+        return;
+      }
+
+      try {
+        const result = await callDiagnose(antworten, isDebug);
+        renderResult(result);
+
+        // Termin-Button
+        document.getElementById('btn-termin').addEventListener('click', async () => {
+          const statusEl = document.getElementById('transcript-status');
+          statusEl.textContent = 'Transkript wird an Bernhard gesendet…';
+
+          try {
+            await callSendTranscript({
+              antworten,
+              hypothese_klient: result.hypothese_klient,
+              hypothese_intern: result.hypothese_intern,
+              muster_erkannt: result.muster_erkannt,
+              vertiefungsfragen: result.vertiefungsfragen,
+              zeitstempel: new Date().toISOString(),
+              profil: params.get('profil') || 'standard'
+            });
+            statusEl.textContent = '✓ Bernhard hat deine Antworten erhalten.';
+            clearSession();
+          } catch {
+            statusEl.textContent = 'Versand fehlgeschlagen — Bernhard ist trotzdem informiert.';
+          }
+
+          setTimeout(() => {
+            window.open(bookingUrl, '_blank', 'noopener');
+          }, 800);
+        });
+
+      } catch (err) {
+        console.error('Diagnose-Fehler:', err);
+        showState('state-error');
+      }
+    }
+
+    run();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innerformel Diagnose — Wo hängt es wirklich?</title>
+  <meta name="description" content="In 10 Minuten zur ersten Hypothese: Wo liegt der Hebel in deinem Business?">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+    <main class="card" role="main">
+
+      <p class="question-counter">Bernhard Uka · Diagnose-Tool</p>
+
+      <h1 class="heading-serif">Du hast viel auf dem Tisch.<br>Lass uns schauen, wo der Hebel sitzt.</h1>
+
+      <p class="subtext" style="margin-top: 1.25rem;">
+        In etwa 10 Minuten beantwortest du 8–10 Fragen. Du bekommst eine erste Hypothese — kein Urteil, kein Persönlichkeitstest, keine Werbung. Danach sprichst du mit Bernhard.
+      </p>
+
+      <div class="divider" style="margin: 2rem 0;"></div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: var(--color-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">→</span>
+          <span>Keine richtigen oder falschen Antworten — schreib, was dir wirklich durch den Kopf geht.</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: var(--color-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">→</span>
+          <span>Deine Antworten bleiben bei dir im Browser — sie werden erst mit der Diagnose an Bernhard übermittelt.</span>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+          <span style="color: var(--color-accent); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;">→</span>
+          <span>Die KI macht einen ersten Treffer. Bernhard schärft ihn im Gespräch.</span>
+        </div>
+      </div>
+
+      <a href="diagnose.html" class="btn btn-primary btn-full" id="start-btn">
+        Diagnose starten
+      </a>
+
+      <p class="subtext" style="text-align: center; margin-top: 1rem; font-size: 0.85rem;">
+        Keine Anmeldung · Kein Login · 10 Minuten
+      </p>
+
+    </main>
+  </div>
+
+  <footer>
+    <a href="https://bernharduka.com" target="_blank" rel="noopener">bernharduka.com</a>
+  </footer>
+
+  <script>
+    // URL-Parameter an diagnose.html weitergeben
+    document.getElementById('start-btn').addEventListener('click', function(e) {
+      const params = new URLSearchParams(window.location.search);
+      const href = 'diagnose.html' + (params.toString() ? '?' + params.toString() : '');
+      this.href = href;
+    });
+  </script>
+
+</body>
+</html>
