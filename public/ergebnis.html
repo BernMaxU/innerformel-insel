@@ -138,7 +138,7 @@
         try {
           const session = JSON.parse(raw);
           // Katalog nachladen um Fragetexte zu ergänzen
-          const res = await fetch('../prompts/frage-katalog.json');
+          const res = await fetch('/data/frage-katalog.json');
           const katalog = await res.json();
           const profil = params.get('profil') === 'mehrere-standbeine' ? 'mehrere-standbeine' : 'standard';
           const fragen = katalog[profil] || katalog['standard'];

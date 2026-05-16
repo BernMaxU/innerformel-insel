@@ -23,7 +23,7 @@ export async function initDialogue() {
 }
 
 async function loadFragenKatalog() {
-  const res = await fetch('../prompts/frage-katalog.json');
+  const res = await fetch('/data/frage-katalog.json');
   return res.json();
 }
 

@@ -1,0 +1,114 @@
+{
+  "standard": [
+    {
+      "id": "q1",
+      "frage": "Beschreib deinen Arbeitstag letzte Woche in 3–5 Sätzen. Was hast du gemacht — und was davon hätte eigentlich jemand anderes machen können?",
+      "hinweis": "Zeigt Rollenklarheit und Delegationspotenzial",
+      "min_zeichen": 50
+    },
+    {
+      "id": "q2",
+      "frage": "Wenn du ehrlich bist: Was ist die eine Sache, die du immer wieder vor dir herschiebst — obwohl du weißt, dass sie wichtig wäre?",
+      "hinweis": "Zeigt Planungsparalyse oder Prioritätsvermeidung",
+      "min_zeichen": 30
+    },
+    {
+      "id": "q3",
+      "frage": "Wie würde ein Kunde, der dich nicht kennt, in einem Satz beschreiben, was du machst? Schreib den Satz auf — auch wenn er nicht perfekt ist.",
+      "hinweis": "Zeigt Positionierungsklarheit oder Identitätsdiffusion",
+      "min_zeichen": 20
+    },
+    {
+      "id": "q4",
+      "frage": "Wo verlierst du gerade die meiste Energie — und warum hörst du trotzdem nicht auf damit?",
+      "hinweis": "Zeigt Energiemuster und Bindungsursache",
+      "min_zeichen": 40
+    },
+    {
+      "id": "q5",
+      "frage": "Stell dir vor, du könntest eine einzige Sache in deinem Business in den nächsten 90 Tagen wirklich lösen. Was wäre das — und warum genau die?",
+      "hinweis": "Zeigt eigene Priorisierungsfähigkeit",
+      "min_zeichen": 40
+    },
+    {
+      "id": "q6",
+      "frage": "Wann hast du das letzte Mal das Gefühl gehabt, dass dein Business wirklich in die richtige Richtung läuft? Was war damals anders?",
+      "hinweis": "Zeigt Kontrastbild — was hat früher funktioniert?",
+      "min_zeichen": 40
+    },
+    {
+      "id": "q7",
+      "frage": "Wer in deinem Umfeld (Team, Familie, Partner) merkt als erstes, wenn du im Stress-Modus bist — und was sehen sie dann?",
+      "hinweis": "Zeigt Außenwahrnehmung des Musters",
+      "min_zeichen": 30
+    },
+    {
+      "id": "q8",
+      "frage": "Was würde sich in deinem Business in 12 Monaten verändert haben müssen, damit du sagst: 'Das war ein gutes Jahr'?",
+      "hinweis": "Zeigt Erfolgsbild und Messgröße",
+      "min_zeichen": 40
+    }
+  ],
+  "mehrere-standbeine": [
+    {
+      "id": "ms1",
+      "frage": "Du hast mehrere Geschäftsbereiche oder Tätigkeiten. Nenn sie kurz — und sag mir, wie viel Prozent deiner Zeit du schätzungsweise in jedem verbringst.",
+      "hinweis": "Zeigt tatsächliche Energieverteilung vs. gefühlte Priorität",
+      "min_zeichen": 40
+    },
+    {
+      "id": "ms2",
+      "frage": "In welchem deiner Bereiche läuft es gerade am besten — gemessen an Kunden-Feedback, Umsatz oder deinem eigenen Gefühl?",
+      "hinweis": "Zeigt, wo das System schon trägt",
+      "min_zeichen": 30
+    },
+    {
+      "id": "ms3",
+      "frage": "Wo hast du das Gefühl, dass du Kunden im Stich lässt oder Qualität leidet — weil du einfach zu dünn aufgestellt bist?",
+      "hinweis": "Zeigt Kundenservice-Kollaps-Risiko",
+      "min_zeichen": 40
+    },
+    {
+      "id": "ms4",
+      "frage": "Was ist der gemeinsame Kern deiner verschiedenen Tätigkeiten — was können nur du oder dein Team, was andere nicht können?",
+      "hinweis": "Zeigt, ob ein roter Faden erkennbar ist",
+      "min_zeichen": 30
+    },
+    {
+      "id": "ms5",
+      "frage": "Hast du schon mal daran gedacht, einen der Bereiche aufzugeben oder zusammenzulegen? Was hat dich bisher davon abgehalten?",
+      "hinweis": "Zeigt emotionale Bindung und Entscheidungsblockade",
+      "min_zeichen": 30
+    },
+    {
+      "id": "ms6",
+      "frage": "Beschreib deinen Arbeitstag letzte Woche in 3–5 Sätzen. Was hast du gemacht — und was davon hätte eigentlich jemand anderes machen können?",
+      "hinweis": "Zeigt Rollenklarheit und Delegationspotenzial",
+      "min_zeichen": 50
+    },
+    {
+      "id": "ms7",
+      "frage": "Wenn du ehrlich bist: Was ist die eine Sache, die du immer wieder vor dir herschiebst — obwohl du weißt, dass sie wichtig wäre?",
+      "hinweis": "Zeigt Planungsparalyse oder Prioritätsvermeidung",
+      "min_zeichen": 30
+    },
+    {
+      "id": "ms8",
+      "frage": "Was würde sich in deinem Business in 12 Monaten verändert haben müssen, damit du sagst: 'Das war ein gutes Jahr'?",
+      "hinweis": "Zeigt Erfolgsbild und Messgröße",
+      "min_zeichen": 40
+    },
+    {
+      "id": "ms9",
+      "frage": "Stell dir vor, ein Freund fragt dich: 'Was machst du eigentlich genau?' — Was sagst du? Schreib die Antwort auf, die du wirklich geben würdest.",
+      "hinweis": "Zeigt Positionierungsklarheit oder Identitätsdiffusion",
+      "min_zeichen": 30
+    },
+    {
+      "id": "ms10",
+      "frage": "Wenn einer deiner drei Bereiche morgen wegfiele — welcher würde dich am wenigsten treffen? Und warum?",
+      "hinweis": "Zeigt tatsächliche Priorität vs. deklarierte Priorität",
+      "min_zeichen": 30
+    }
+  ]
+}
