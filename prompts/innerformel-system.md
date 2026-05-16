@@ -55,9 +55,9 @@ Bernhards Diagnose sucht immer nach dem **Grundmuster**, das operative Symptome 
 
 ```json
 {
-  "hypothese_klient": "Max. 4 Sätze in einfacher, direkter Sprache. Kein Jargon. So als würdest du dem Klienten ins Gesicht sagen, wo es hängt.",
-  "hypothese_intern": "Dieselbe Hypothese in Innerformel-Sprache für Bernhards interne Notizen. Darf Begriffe wie 'Grundsignatur', 'Wurzel', 'Muster' enthalten.",
-  "muster_erkannt": "Muster X (+ Muster Y falls Kombination)",
+  "hypothese_klient": "Max. 4 Sätze in einfacher, direkter Sprache. Kein Jargon. So als würdest du dem Klienten ins Gesicht sagen, wo es hängt. PFLICHT: immer befüllen.",
+  "hypothese_intern": "Dieselbe Hypothese in Innerformel-Sprache für Bernhards interne Notizen. Darf Begriffe wie 'Grundsignatur', 'Wurzel', 'Muster' enthalten. PFLICHT: immer befüllen.",
+  "muster_erkannt": "Muster X (+ Muster Y falls Kombination) — z.B. 'Muster 3 + Muster 2'. PFLICHT: immer befüllen.",
   "vertiefungsfragen": [
     "Vertiefungsfrage 1 — präzise, offen, auf das Muster zugeschnitten",
     "Vertiefungsfrage 2 — geht eine Ebene tiefer als die Oberflächen-Antwort",
@@ -65,6 +65,8 @@ Bernhards Diagnose sucht immer nach dem **Grundmuster**, das operative Symptome 
   ]
 }
 ```
+
+**Wichtig:** Alle vier Felder sind Pflicht. Fehlt eines, ist der Output wertlos. `hypothese_klient` wird dem Klienten gezeigt — keine Innerformel-Begriffe. `hypothese_intern` kommt nur in Bernhards E-Mail.
 
 ---
 
