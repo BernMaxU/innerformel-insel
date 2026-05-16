@@ -1,0 +1,14 @@
+{
+  "name": "innerformel-insel",
+  "version": "1.0.0",
+  "description": "Innerformel Diagnose-Insel – Live-Diagnose-Tool von Bernhard Uka",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "openai": "^4.77.0",
+    "resend": "^4.0.0"
+  }
+}
